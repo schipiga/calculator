@@ -1,4 +1,9 @@
 Calculator::Application.routes.draw do
+
+  resources :calculations, :only => :index
+
+  root :to => 'calculations#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
